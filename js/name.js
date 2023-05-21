@@ -14,3 +14,10 @@ saveButton.addEventListener('click', function() {
 
   console.log(savedText);
 });
+
+// FUNCTION FOR BUTTON TO NAVIGATE TO LINK
+
+saveButton.onclick = function() {
+
+  window.location.href = '../pages/dificultndcolors.html';
+};
