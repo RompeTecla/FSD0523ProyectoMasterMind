@@ -104,4 +104,9 @@ body {
     margin-top: 5.5em;
     cursor: pointer;
     box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+    transition: 1s;
+}
+.names-button:hover {
+    box-shadow: 0px 0px 30px 0px rgba(255,255,255,1);
+    transition: 1s;
 }
