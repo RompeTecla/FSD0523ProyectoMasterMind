@@ -19,5 +19,5 @@ saveButton.addEventListener('click', function() {
 
 saveButton.onclick = function() {
 
-  window.location.href = '../pages/dificultndcolors.html';
+  window.location.href = '../pages/dificult.html';
 };

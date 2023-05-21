@@ -7,8 +7,10 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
-/* INDEX HTML*/
+.text{
+    user-select: none;
+}
+/* INDEX.HTML STYLES*/
 
 .container-index {
     position: relative;
@@ -67,7 +69,7 @@ body {
   }
 }
 
-/* NAME HTML */
+/* NAME.HTML STYLES */
 
 .container-name-cel {
     position: relative;
@@ -133,3 +135,4 @@ body {
         margin-top: 4.5em;
     }
 }
+
