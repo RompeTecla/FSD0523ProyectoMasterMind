@@ -175,3 +175,30 @@ body {
 .c-hard {
     background-color: crimson;
 }
+
+/* COLOR-EASY/MEDIUM/HARD.HTML STYLES */
+.container-colors-easy {
+    position: relative;
+    display: flex;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em;
+    width: 30em;
+    height: 30em;
+}
+.title-colors{
+    position: absolute;
+    margin-bottom: 3.3em;
+    color: #FFFFFF;
+    font-family: 'Westminster';
+    font-size: 6em;
+}
+.balls {
+    border: #FFFFFF solid 0.16em;
+    box-sizing: border-box;
+    height: 4em;
+    width: 4em;
+    border-radius: 5em;
+}
