@@ -7,7 +7,9 @@ body {
     height: 100vh;
     width: 100vw;
 }
-/* INDEX */
+
+/* INDEX HTML*/
+
 .container-index {
     position: relative;
     display: flex;
@@ -31,8 +33,6 @@ body {
 }
 .brain:hover{
     filter: drop-shadow(0px 0px 35px #FFFFFF);
-    margin-bottom: 3em;
-    height: 27em;
     transition: 1s;
 }
 .logo-name {
@@ -66,3 +66,4 @@ body {
         width: 20em;
   }
 }
+
