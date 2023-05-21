@@ -67,3 +67,22 @@ body {
   }
 }
 
+/* NAME HTML */
+
+.container-name-cel {
+    position: relative;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em;
+    width: 30em;
+    height: 30em;
+}
+.title-name {
+    position: absolute;
+    margin-bottom: 3.3em;
+    color: #FFFFFF;
+    font-family: 'Westminster';
+    font-size: 6em;
+}
