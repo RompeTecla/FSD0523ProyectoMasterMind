@@ -42,12 +42,12 @@ body {
     background-repeat: no-repeat;
     margin-top: 29em;
     height: 10em;
-    width: 20em;
+    width: 30em;
 }
 
 /* INDEX MEDIA QUERIES */
 
-@media screen and (max-width: 360px) {
+media screen and (max-width: 360px) {
     .container-logo {
         height: 20em;
         width: 20em;
