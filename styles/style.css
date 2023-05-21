@@ -7,7 +7,7 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
+/* INDEX */
 .container-index {
     position: relative;
     display: flex;
@@ -19,18 +19,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
     background-position: center;    
     height: 35em;
     width: 30em;
 }
 .brain{
-    background-image: url(../img/brain.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: center;
+    filter: drop-shadow(0px 0px 10px #FFFFFF);
+    margin-bottom: 3em;
     height: 27em;
-    width: 25em;
+    transition: 1s;
+}
+.brain:hover{
+    filter: drop-shadow(0px 0px 35px #FFFFFF);
+    margin-bottom: 3em;
+    height: 27em;
+    transition: 1s;
 }
 .logo-name {
     position: absolute;
@@ -39,17 +42,21 @@ body {
     background-repeat: no-repeat;
     margin-top: 29em;
     height: 10em;
-    width: 30em;
+    width: 20em;
 }
+
+/* INDEX MEDIA QUERIES */
+
 @media screen and (max-width: 360px) {
     .container-logo {
-      height: 20em;
-      width: 20em;
+        height: 20em;
+        width: 20em;
     }
   
     .brain {
-      height: 15em;
-      width: 15em;
+        margin: 0em;
+        height: 15em;
+        width: 15em;
     }
 
     .logo-name {
