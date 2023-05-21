@@ -136,3 +136,42 @@ body {
     }
 }
 
+/* DIFICULT.HTML STYLES */
+
+.container-dificult {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-dif {
+    position: absolute;
+    margin-bottom: 3.3em;
+    color: #FFFFFF;
+    font-family: "Westminster";
+    font-size: 6em;
+}
+.dif-select {
+    font-family: "Westminster";
+    font-size: 3em;
+    transition: 1s;
+    width: 5em;
+    outline: none;
+}
+.dif-select:hover{
+    box-shadow: 0px 0px 30px 0px rgba(255,255,255,1);
+    transition: 1s;
+}
+.dif {
+    text-align: center;
+    appearance: none;
+}
+.c-easy {
+    background-color: rgb(0, 217, 255);
+}
+.c-middle {
+    background-color: rgb(132, 0, 255);
+}
+.c-hard {
+    background-color: crimson;
+}
