@@ -95,6 +95,7 @@ body {
     text-align: center;
     border-radius: 0.2em;
     color: rgb(80, 80, 80);
+    caret-color: rgb(255, 0, 64);
 }
 .names-button {
     position: absolute;
@@ -109,6 +110,10 @@ body {
 .names-button:hover {
     box-shadow: 0px 0px 30px 0px rgba(255,255,255,1);
     transition: 1s;
+}
+.names-button:active {
+    transform: scale(0.96);
+    transition: 1ms;
 }
 
 /* NAME.HTML MEDIA QUERIES */
