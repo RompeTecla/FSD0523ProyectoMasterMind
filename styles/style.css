@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-index {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    background-position: center;    
+    height: 35em;
+    width: 30em;
+}
+.brain{
+    background-image: url(../img/brain.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    height: 27em;
+    width: 25em;
+}
+.logo-name {
+    position: absolute;
+    background-image: url(../img/logo-name.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 29em;
+    height: 10em;
+    width: 30em;
+}
+@media screen and (max-width: 360px) {
+    .container-logo {
+      height: 20em;
+      width: 20em;
+    }
+  
+    .brain {
+      height: 15em;
+      width: 15em;
+    }
+
+    .logo-name {
+        background-size: contain;
+        margin-top: 22em;
+        height: 10em;
+        width: 20em;
+  }
+}
