@@ -11,7 +11,10 @@ body {
     user-select: none;
 }
 /* INDEX.HTML STYLES*/
-
+.font-west {
+    font-family: "Westminster";
+    src: url(../fonts/westminster.ttf);
+}
 .container-index {
     position: relative;
     display: flex;
@@ -85,14 +88,12 @@ body {
     position: absolute;
     margin-bottom: 3.3em;
     color: #FFFFFF;
-    font-family: 'Westminster';
     font-size: 6em;
 }
 .name-cel {
     box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
     width: 20em;
     height: 2em;
-    font-family: 'Westminster';
     font-size: 3.1em;
     text-align: center;
     border-radius: 0.2em;
@@ -101,7 +102,6 @@ body {
 }
 .names-button {
     position: absolute;
-    font-family: 'Westminster';
     font-size: 3.1em;
     border-radius: 0.2em;
     margin-top: 5.5em;
@@ -114,7 +114,7 @@ body {
     transition: 1s;
 }
 .names-button:active {
-    transform: scale(0.96);
+    transform: scale(1.06);
     transition: 1ms;
 }
 
@@ -148,11 +148,9 @@ body {
     position: absolute;
     margin-bottom: 3.3em;
     color: #FFFFFF;
-    font-family: "Westminster";
     font-size: 6em;
 }
 .dif-select {
-    font-family: "Westminster";
     font-size: 3em;
     transition: 1s;
     width: 5em;
@@ -165,6 +163,7 @@ body {
 .dif {
     text-align: center;
     appearance: none;
+    transition: 4s;
 }
 .c-easy {
     background-color: rgb(0, 217, 255);
@@ -192,7 +191,6 @@ body {
     position: absolute;
     margin-bottom: 3.3em;
     color: #FFFFFF;
-    font-family: 'Westminster';
     font-size: 6em;
 }
 .balls {

@@ -7,6 +7,9 @@ dificultSelector.addEventListener('change', function() {
 
   //ADD SWITCH TO SELECT ONE OF THREE VALUE (each option links to different html)
   switch (dificultSelected) {
+    case "select":
+      alert("Selecciona un nivel de dificultad");
+      console.log('Dificultad no válida');
     case "easy":
       window.location.href = '../pages/coloreasy.html';
       break;
