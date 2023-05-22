@@ -16,7 +16,5 @@ dificultSelector.addEventListener('change', function() {
     case "hard":
       window.location.href = '../pages/colorhard.html';
       break;
-    default:
-      console.log('Dificultad no válida');
   }
 });
