@@ -7,20 +7,24 @@ body {
     height: 100vh;
     width: 100vw;
 }
-.text{
-    user-select: none;
-}
-/* INDEX.HTML STYLES*/
-.font-west {
+@font-face {
     font-family: "Westminster";
     src: url(../fonts/westminster.ttf);
 }
+.text{
+    user-select: none;
+}
+.font-west{
+    font-family: "Westminster";
+}
+
+/* INDEX.HTML STYLES*/
+
 .container-index {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 .container-logo {
     display: flex;
