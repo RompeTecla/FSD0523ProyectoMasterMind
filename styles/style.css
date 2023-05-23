@@ -73,14 +73,12 @@ body {
         margin-top: 22em;
         height: 10em;
         width: 20em;
-  }
-}
+  }}
 
 /* NAME.HTML STYLES */
 
 .container-name-cel {
     position: relative;
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,15 +88,16 @@ body {
 }
 .title-name {
     position: absolute;
-    margin-bottom: 3.3em;
-    color: #FFFFFF;
+    margin-bottom: 3.7em;
+    filter: drop-shadow(0px 0px 9px #ffffff);
+    color: #000000;
     font-size: 6em;
 }
 .name-cel {
     box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
-    width: 20em;
-    height: 2em;
-    font-size: 3.1em;
+    width: 5em;
+    height: 1em;
+    font-size: 2.9em;
     text-align: center;
     border-radius: 0.2em;
     color: rgb(80, 80, 80);
@@ -131,14 +130,13 @@ body {
     }
     .name-cel {
         width: 5em;
-        height: 1.5em;
-        font-size: 3.1em;
+        height: 1em;
+        font-size: 2.9em;
     }
     .names-button {
-        font-size: 2.8em;
+        font-size: 2.5em;
         margin-top: 4.5em;
-    }
-}
+    }}
 
 /* DIFICULT.HTML STYLES */
 
@@ -147,11 +145,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5em;
+    width: 30em;
+    height: 30em;
 }
 .title-dif {
     position: absolute;
-    margin-bottom: 3.3em;
-    color: #FFFFFF;
+    margin-bottom: 3.7em;
+    filter: drop-shadow(0px 0px 9px #ffffff);
+    color: #000000;
     font-size: 6em;
 }
 .dif-select {
@@ -179,6 +181,26 @@ body {
     background-color: crimson;
 }
 
+/* DIFICULT.HTML MEDIA QUERIES */
+
+@media screen and (max-width: 360px) {
+    .title-dif {
+        margin-bottom: 3.5em;
+        font-size: 4.5em;
+    }
+    .dif-select {
+        text-align: center;
+        width: 5em;
+        height: 1em;
+        font-size: 2.9em;
+    }
+    .dif {
+        text-align: center;
+        appearance: none;
+        transition: 4s;
+    }
+}
+
 /* COLOR-EASY/MEDIUM/HARD.HTML STYLES */
 .container-colors-easy {
     position: relative;
@@ -203,4 +225,36 @@ body {
     height: 4em;
     width: 4em;
     border-radius: 5em;
+}
+
+/* COLORSEASY.HTML MEDIA QUERIES */
+
+
+
+
+
+/* GAME.HTML STYLES */
+.container-game{
+    width: 100vw;
+    height: 100vh;
+}
+.logo-name-game {
+    margin-top: 1em;
+    margin-left: 1em;
+    position: absolute;
+    background-image: url(../img/brain.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 8px #FFFFFF);
+    height: 10em;
+    width: 10em;
+}
+
+/* GAME.HTML MEDIA QUERIES */
+
+@media screen and (max-width: 360px) {
+    .logo-name-game {
+        height: 4em;
+    }
+    
 }
