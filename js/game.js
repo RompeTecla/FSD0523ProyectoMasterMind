@@ -1,4 +1,4 @@
-let dia = "Sabado";
+let pintame = "Sabado";
 
     switch (dia) {
         case "sábado":
