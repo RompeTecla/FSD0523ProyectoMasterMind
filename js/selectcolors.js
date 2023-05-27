@@ -1,5 +1,7 @@
+//
+
 document.addEventListener('DOMContentLoaded', function() {
-  const dificultad = sessionStorage.getItem('dificultad');
+  const dificultad = sessionStorage.getItem('dificultad');   
   const colorContainer = document.getElementById('color-container');
   const colorInput = document.getElementById('color-input');
   const btnConfirm = document.getElementById('btn-confirm');
@@ -55,3 +57,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// colorDivs.forEach((div, index) => {
+//   // Agregar evento para borrar color de fondo en clic
+//   div.addEventListener('click', () => {
+//     selectColor(index);
+//   });
+
+//   if (isMobile) {
+//     // Agregar botón para borrar color de fondo en dispositivos móviles
+//     const deleteButton = document.createElement('button');
+//     deleteButton.textContent = 'Borrar';
+//     deleteButton.addEventListener('click', () => {
+//       deleteColor(index);
+//     });
+//     div.appendChild(deleteButton);
+//   }
+// });
+
+// // Función para borrar el color de fondo
+// function deleteColor(index) {
+//   colorDivs[index].style.backgroundColor = '';
+//   arrayColors[index] = null;
+// }

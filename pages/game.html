@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Master Brain</title>
+    <title>Tablero de juego</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
+    <div class="logo-name-game"></div>
     <div class="container-game">
-        <div class="logo-name-game"></div>
-            
-        <div class="table-game" id="tableGame"></div>
+        <div class="full-gaming-table">
+            <div class="combination-secret"></div>
+            <div class="table-game" id="tableGame">
+                <div class="check-column"></div>
+                <div class="color-ball-history"></div>
+            </div>
+            <div class="controls-rows">
+                <div class="row-select-color-game">
+                    <div class="check-button font-west text" onclick="">PROBAR</div>
+                    <div class="fixed-ball1 big-balls"></div>
+                    <div class="fixed-ball2 big-balls"></div>
+                    <div class="fixed-ball3 big-balls"></div>
+                    <div class="fixed-ball4 big-balls"></div>
+            </div>
+        </div>
     </div>
     <script src="../js/game.js"></script>
 </body>
