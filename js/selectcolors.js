@@ -1,12 +1,17 @@
-//
 
+// Este evento se ejecuta cuando el contenido del DOM ha sido completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-  const dificultad = sessionStorage.getItem('dificultad');   
+  // Obtenemos la dificultad almacenada en el Session Storage
+  const dificultad = sessionStorage.getItem('dificultad');
+  // Obtenemos el contenedor de colores del tablero de juego
   const colorContainer = document.getElementById('color-container');
+  // Obtenemos el input de selección de color
   const colorInput = document.getElementById('color-input');
+  // Obtenemos el botón de confirmación
   const btnConfirm = document.getElementById('btn-confirm');
-  
+
   let numberDivs;
+  // Determinamos el número de divs de colores según la dificultad seleccionada
   if (dificultad === 'easy') {
     numberDivs = 4;
   } else if (dificultad === 'middle') {
@@ -14,71 +19,72 @@ document.addEventListener('DOMContentLoaded', function() {
   } else if (dificultad === 'hard') {
     numberDivs = 6;
   }
-  
+
+  // Creamos los divs de colores y los agregamos al contenedor
   for (let i = 0; i < numberDivs; i++) {
     const div = document.createElement('div');
     div.classList.add('color');
     colorContainer.appendChild(div);
   }
-  
-  // Ahora obtenemos los divs con la clase "color" después de que se haya cargado el contenido del DOM
+
+  // Obtenemos los divs de colores después de que el contenido del DOM haya sido cargado
   const colorDivs = Array.from(document.getElementsByClassName('color'));
-  
-  // Array para almacenar los colores seleccionados
+  // Array para almacenar los colores seleccionados por el jugador
   const arrayColors = [];
-  
-  // Añade eventos a los divs de colores
+
+  // Añadimos eventos a los divs de colores
   colorDivs.forEach((div, index) => {
+    // Evento para anular el menú contextual al hacer clic derecho
     div.addEventListener('contextmenu', (event) => {
       event.preventDefault();
       div.style.backgroundColor = '';
       arrayColors[index] = null;
     });
-  
+
+    // Evento para seleccionar un color al hacer clic izquierdo
     div.addEventListener('click', () => {
       selectColor(index);
     });
   });
-  
-  // Función para seleccionar un color
+
+  // Función para seleccionar un color y almacenarlo en el array de colores seleccionados
   function selectColor(index) {
     colorDivs[index].style.backgroundColor = colorInput.value;
     arrayColors[index] = colorInput.value;
   }
-  
-  // Evento para el botón "Confirmar colores"
+
+  // Evento para el botón de confirmación de colores
   btnConfirm.addEventListener('click', () => {
     if (arrayColors.every(color => color !== null)) {
-      // Almacena los colores en sessionStorage
+      // Almacenamos los colores seleccionados en el Session Storage
       sessionStorage.setItem('arrayColors', JSON.stringify(arrayColors));
-      
-      // Redirige al HTML del tablero de juego
+
+      // Generamos la combinación secreta aleatoria con los colores seleccionados
+      const coloresSeleccionados = JSON.parse(sessionStorage.getItem('arrayColors'));
+      const combinacionSecreta = generarCombinacionSecreta(coloresSeleccionados);
+      sessionStorage.setItem('combinacionSecreta', JSON.stringify(combinacionSecreta));
+
+      // Redirigimos a la página del tablero de juego
       window.location.href = '../pages/game.html';
     }
   });
 });
 
-// const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+// Función para generar una combinación secreta aleatoria con los colores seleccionados sin repetir colores
+function generarCombinacionSecreta(coloresSeleccionados) {
+  const combinacion = [];
 
-// colorDivs.forEach((div, index) => {
-//   // Agregar evento para borrar color de fondo en clic
-//   div.addEventListener('click', () => {
-//     selectColor(index);
-//   });
+  // Creamos una copia del array de colores seleccionados
+  const coloresDisponibles = [...coloresSeleccionados];
 
-//   if (isMobile) {
-//     // Agregar botón para borrar color de fondo en dispositivos móviles
-//     const deleteButton = document.createElement('button');
-//     deleteButton.textContent = 'Borrar';
-//     deleteButton.addEventListener('click', () => {
-//       deleteColor(index);
-//     });
-//     div.appendChild(deleteButton);
-//   }
-// });
+  for (let i = 0; i < 4; i++) {
+    // Seleccionamos un color aleatorio de los colores disponibles
+    const colorAleatorio = coloresDisponibles[Math.floor(Math.random() * coloresDisponibles.length)];
+    // Añadimos el color a la combinación secreta
+    combinacion.push(colorAleatorio);
+    // Removemos el color de los colores disponibles para evitar repeticiones
+    coloresDisponibles.splice(coloresDisponibles.indexOf(colorAleatorio), 1);
+  }
 
-// // Función para borrar el color de fondo
-// function deleteColor(index) {
-//   colorDivs[index].style.backgroundColor = '';
-//   arrayColors[index] = null;
-// }
+  return combinacion;
+}
