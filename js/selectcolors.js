@@ -10,15 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Obtenemos el botón de confirmación
   const btnConfirm = document.getElementById('btn-confirm');
 
-  let numberDivs;
   // Determinamos el número de divs de colores según la dificultad seleccionada
-  if (dificultad === 'easy') {
-    numberDivs = 4;
-  } else if (dificultad === 'middle') {
-    numberDivs = 5;
-  } else if (dificultad === 'hard') {
-    numberDivs = 6;
-  }
+  let numberDivs = 4;
+switch (dificultad) {
+    case "middle":
+        numberDivs = 5;
+        break;
+    case "hard":
+        numberDivs = 6;
+        break;
+    default:
+        numberDivs = 4;
+        break;
+}
 
   // Creamos los divs de colores y los agregamos al contenedor
   for (let i = 0; i < numberDivs; i++) {

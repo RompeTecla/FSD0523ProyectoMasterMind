@@ -207,7 +207,7 @@ body {
     }
 }
 
-/* COLOR-EASY/MEDIUM/HARD.HTML STYLES */
+/* COLORSELECT.HTML STYLES */
 .container-colors {
     position: relative;
     display: flex;
@@ -244,9 +244,6 @@ body {
 .color:hover {
     box-shadow: white;
     box-shadow: 0px 0px 14px 0px rgba(255,255,255,0.75);
-}
-.color-selector {
-
 }
 .btn-clear {
     font-size: 1.5em;
@@ -400,16 +397,19 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 17.7rem;
-
+    width: 21rem;
 }
-.color-select-ball01, .color-select-ball02, .color-select-ball03, .color-select-ball04 {
+.color-select-ball01, .color-select-ball02, .color-select-ball03, .color-select-ball04, .color-select-ball05, .color-select-ball06 {
     width: 3.5em;
     height: 3.5em;
     border-radius: 5em;
     border: rgb(203, 203, 255) solid 0.16em;
     box-sizing: border-box;
     cursor: pointer;
+    background-color: "";
+}
+.hola {
+    background-color: rgb(255, 0, 0);
 }
 .check-button {
     color: #fff;
@@ -419,6 +419,7 @@ body {
     font-size: 2em;
     height: 2em;
     width: 5em;
+    margin-left: -1.5rem;
     border-radius: 0.2em;
     box-sizing: border-box;
     cursor: pointer;
