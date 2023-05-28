@@ -338,7 +338,7 @@ body {
 .check-cell01, .check-cell02, .check-cell03, .check-cell04, .check-cell05, .check-cell06, .check-cell07, .check-cell08, .check-cell09, .check-cell10 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #4CAF50;
     height: 3.48em;
     width: 7.5em;
@@ -349,10 +349,11 @@ body {
     border: none;
 }
 .check01, .check02, .check03, .check04 {
+    display: flex;
     border-radius: 1em;
     background-color: "";
-    height: 1rem;
-    width: 1rem;
+    height: 0.7rem;
+    width: 0.7rem;
     border: #fff solid 0.16em;
 }
 .color-ball-history {
@@ -366,7 +367,7 @@ body {
 .row-history01, .row-history02, .row-history03, .row-history04, .row-history05, .row-history06, .row-history07, .row-history08, .row-history09, .row-history10 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #4CAF50;
     height: 3.48em;
     width: 22.3em;
@@ -375,6 +376,14 @@ body {
 } 
 .row-history10 {
     border: none;
+}
+.history-ball01, .history-ball02, .history-ball03, .history-ball04 {
+    width: 2.7em;
+    height: 2.7em;
+    margin: -3em;
+    border-radius: 5em;
+    border: rgb(203, 203, 255) solid 0.16em;
+    box-sizing: border-box;
 }
 .row-select-color-game {
     position: relative;
