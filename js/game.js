@@ -8,14 +8,6 @@ const dificultad = sessionStorage.getItem('dificultad');
 const selectColorsGameDiv = document.querySelector('.select-colors-game-div');
 
 // Determinar la cantidad de divs según el nivel de dificultad
-// let numDivs;
-// if (dificultad === 'easy') {
-//   let numDivs = 4;
-// } else if (dificultad === 'middle') {
-//   let numDivs = 5;
-// } else if (dificultad === 'hard') {
-//   let numDivs = 6;
-// }
 let numDivs;
 switch (dificultad) {
     case "middle":
@@ -35,7 +27,6 @@ for (let i = 1; i <= numDivs; i++) {
   const div = document.createElement('div');
   div.classList.add(`color-select-ball0${i}`);
   div.classList.add('color-select-ball');
-//   div.classList.add('hola');
   div.id=`cs-${i}`
   div.style.backgroundColor = colores[i - 1]
   selectColorsGameDiv.appendChild(div);
