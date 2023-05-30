@@ -38,7 +38,8 @@ switch (dificultad) {
 
   // Añadimos eventos a los divs de colores
   colorDivs.forEach((div, index) => {
-    // Evento para anular el menú contextual al hacer clic derecho
+    // Evento para anular la función del menú contextual al hacer clic derecho con el ratón 
+    // y la cambia por la de cambiar el estilo "background-color" del css de unos div en específico
     div.addEventListener('contextmenu', (event) => {
       event.preventDefault();
       div.style.backgroundColor = '';
