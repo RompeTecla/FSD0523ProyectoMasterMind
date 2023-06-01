@@ -7,17 +7,21 @@ const dificultad = sessionStorage.getItem('dificultad');
 // Obtener el elemento contenedor
 const selectColorsGameDiv = document.querySelector('.select-colors-game-div');
 
-// Determinar la cantidad de divs según el nivel de dificultad
-let numDivs;
+// Determinar la cantidad de filas y de colores según el nivel de dificultad
+let numColorButton;
+let numRows;
 switch (dificultad) {
     case "middle":
-        numDivs = 5;
+        numColorButton = 5;
+        numRows = 8;
         break;
     case "hard":
-        numDivs = 6;
+        numColorButton = 6;
+        numRows = 6;
         break;
     default:
-        numDivs = 4;
+        numColorButton = 4;
+        numRows = 10;
         break;
 }
 const colores = JSON.parse(sessionStorage.getItem('arrayColors'));
