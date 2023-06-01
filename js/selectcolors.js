@@ -37,16 +37,16 @@ switch (dificultad) {
   const arrayColors = [];
 
   // Añadimos eventos a los divs de colores
-  colorDivs.forEach((div, index) => {
-    // Evento para anular la función del menú contextual al hacer clic derecho con el ratón 
+  // Evento para anular la función del menú contextual al hacer clic derecho con el ratón 
     // y la cambia por la de cambiar el estilo "background-color" del css de unos div en específico
-    div.addEventListener('contextmenu', (event) => {
-      event.preventDefault();
-      div.style.backgroundColor = '';
-      arrayColors[index] = null;
+  colorDivs.forEach((div, index) => {
+      div.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        div.style.backgroundColor = '';
+        arrayColors[index] = null;
     });
 
-    // Evento para seleccionar un color al hacer clic izquierdo
+    // Evento para seleccionar un color al hacer clic izquierdo sobre la bola que quieres pintar
     div.addEventListener('click', () => {
       selectColor(index);
     });
@@ -58,13 +58,14 @@ switch (dificultad) {
     arrayColors[index] = colorInput.value;
   }
 
-  // Evento para el botón de confirmación de colores
+  // Evento para el botón de confirmación de colores,
+  // Se almacenan los colores seleccionados en el Session Storage,
+  // Generamos la combinación secreta aleatoria con los colores seleccionados,
   btnConfirm.addEventListener('click', () => {
     if (arrayColors.every(color => color !== null)) {
-      // Almacenamos los colores seleccionados en el Session Storage
-      sessionStorage.setItem('arrayColors', JSON.stringify(arrayColors));
 
-      // Generamos la combinación secreta aleatoria con los colores seleccionados
+      sessionStorage.setItem('arrayColors', JSON.stringify(arrayColors));
+      
       const coloresSeleccionados = JSON.parse(sessionStorage.getItem('arrayColors'));
       const combinacionSecreta = generarCombinacionSecreta(coloresSeleccionados);
       sessionStorage.setItem('combinacionSecreta', JSON.stringify(combinacionSecreta));
@@ -87,7 +88,7 @@ function generarCombinacionSecreta(coloresSeleccionados) {
     const colorAleatorio = coloresDisponibles[Math.floor(Math.random() * coloresDisponibles.length)];
     // Añadimos el color a la combinación secreta
     combinacion.push(colorAleatorio);
-    // Removemos el color de los colores disponibles para evitar repeticiones
+    // Se elimina el color disponibles de "colorAleatorio" para la combinacion secreta y así evitar repeticiones en su patrón
     coloresDisponibles.splice(coloresDisponibles.indexOf(colorAleatorio), 1);
   }
 
